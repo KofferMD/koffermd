@@ -21,20 +21,30 @@
 
 Проверить, чтобы все работало без ошибок в консоли */
 
+const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
 
-"use sctrict";
-
-const answer = [];
-answer[0] = prompt('Сколько фильмов вы уже посмотрели?');
-document.write(answer);
-let count = answer;
-const obj = {
-    count: " ",
-    movies: " ",
-    acotrs: " ",
-    genres: [" "],
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
     privat: false
 };
 
-console.log(obj["count"])
+const a = prompt('Один из последних просмотренных фильмов?'),
+      b = prompt('На сколько оцените его?'),
+      c = prompt('Один из последних просмотренных фильмов?'),
+      d = prompt('На сколько оцените его?');
+
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+console.log(personalMovieDB);
+
+
+
+
+
+
+
 
